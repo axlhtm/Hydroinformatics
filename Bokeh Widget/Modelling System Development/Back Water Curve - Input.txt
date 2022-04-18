@@ -1,0 +1,27 @@
+################################################
+### GEOMETRICAL, PHYSICAL AND NUMERICAL DATA ###
+################################################
+
+# Width of channel (m)
+b=150       
+
+# Initial water depth at downstream (m)
+hd=3 
+
+# Space step (m)
+dx=2000      
+
+# Discharge (m3/s)
+Q=500
+
+# Chezy coefficient    
+C=50        
+
+# Channel sloope (m/m)
+S0=0.0001    
+
+# Channel Length (m)
+L=6000
+
+# Number of steps
+Nx=20        
