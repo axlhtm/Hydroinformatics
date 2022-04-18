@@ -1,0 +1,25 @@
+Input File for Free Surface FLow (FSF 1.0) (Static Test)
+Numerical Parameters
+100 - dx (Space Dicretization)
+10 - dt (Time Step)
+10 - NMAXIts (Maximum Iterations)
+10000 - TimeMAX (Maximum Model Time Run)
+0.5 - theta (Time Coefficient, Preissmann)
+0.5 - Psi (Space Coefficient, Preissmann)
+1.0 - Beta (Boussinesq Coefficient)
+Physical Parameters
+100 - bs (Storage Width)
+4 - C (Chezy Coefficient)
+9.81 - gravity
+0 - Ib (Bed Slope)
+2500 - lgth (Length of Channel)
+Q  - Q/h : Upstream Condition
+0 - Upstream Value
+Q - Q/h : Downstream Codition
+0 - Downstream Value
+Data Files
+Depth.inp
+Discharge.inp
+Outputfiles
+WaterDepth.out
+Discharge.out
