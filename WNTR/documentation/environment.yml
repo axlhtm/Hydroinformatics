@@ -1,0 +1,11 @@
+name: wntr
+dependencies:
+    - python=3.8
+    - numpy
+    - scipy
+    - networkx
+    - pandas
+    - matplotlib
+    - sphinx
+    - numpydoc
+    - docutils<0.17

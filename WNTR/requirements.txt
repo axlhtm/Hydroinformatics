@@ -1,0 +1,19 @@
+# Required
+numpy
+scipy
+networkx
+pandas
+matplotlib
+
+# Optional
+plotly
+folium
+utm
+openpyxl
+
+# Testing
+nose
+ipykernel
+nbformat
+nbconvert
+ 
