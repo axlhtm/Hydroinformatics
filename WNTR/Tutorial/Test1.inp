@@ -1,0 +1,275 @@
+[TITLE]
+
+
+[JUNCTIONS]
+;ID              	Elev        	Demand      	Pattern         
+ J2              	0           	0.50        	                	;
+ J3              	0           	0.50        	                	;
+ J4              	0           	0.50        	                	;
+ J5              	0           	0.50        	                	;
+ J6              	0           	0.50        	                	;
+ J7              	0           	0.50        	                	;
+ J8              	0           	0.50        	                	;
+ J9              	0           	0.50        	                	;
+ J10             	0           	0.50        	                	;
+ J11             	0           	0.50        	                	;
+ J12             	0           	0.50        	                	;
+ J13             	0           	0.50        	                	;
+ J14             	0           	0.50        	                	;
+ J15             	0           	0.50        	                	;
+ J16             	0           	0.50        	                	;
+ J17             	0           	0.50        	                	;
+ J18             	0           	0.50        	                	;
+ J19             	0           	0.50        	                	;
+ J20             	0           	0.50        	                	;
+ J21             	0           	0.50        	                	;
+ J22             	0           	0.50        	                	;
+ J23             	0           	0.50        	                	;
+ J24             	0           	0.50        	                	;
+ J25             	0           	0.50        	                	;
+ J26             	0           	0.50        	                	;
+
+[RESERVOIRS]
+;ID              	Head        	Pattern         
+ J1              	50          	                	;
+
+[TANKS]
+;ID              	Elevation   	InitLevel   	MinLevel    	MaxLevel    	Diameter    	MinVol      	VolCurve        	Overflow
+
+[PIPES]
+;ID              	Node1           	Node2           	Length      	Diameter    	Roughness   	MinorLoss   	Status
+ P1              	J2              	J3              	1000        	162.00      	100         	0           	Open  	;
+ P2              	J3              	J4              	1000        	162.00      	100         	0           	Open  	;
+ P3              	J4              	J5              	1000        	162.00      	100         	0           	Open  	;
+ P4              	J5              	J26             	1000        	162.00      	100         	0           	Open  	;
+ P5              	J9              	J8              	1000        	162.00      	100         	0           	Open  	;
+ P6              	J8              	J7              	1000        	162.00      	100         	0           	Open  	;
+ P7              	J7              	J6              	1000        	162.00      	100         	0           	Open  	;
+ P8              	J6              	J25             	1000        	162.00      	100         	0           	Open  	;
+ P9              	J10             	J11             	1000        	162.00      	100         	0           	Open  	;
+ P10             	J11             	J12             	1000        	162.00      	100         	0           	Open  	;
+ P11             	J12             	J13             	1000        	162.00      	100         	0           	Open  	;
+ P12             	J13             	J24             	1000        	162.00      	100         	0           	Open  	;
+ P13             	J17             	J16             	1000        	162.00      	100         	0           	Open  	;
+ P14             	J16             	J15             	1000        	162.00      	100         	0           	Open  	;
+ P15             	J15             	J14             	1000        	162.00      	100         	0           	Open  	;
+ P16             	J14             	J23             	1000        	162.00      	100         	0           	Open  	;
+ P17             	J18             	J19             	1000        	162.00      	100         	0           	Open  	;
+ P18             	J19             	J20             	1000        	162.00      	100         	0           	Open  	;
+ P19             	J20             	J21             	1000        	162.00      	100         	0           	Open  	;
+ P20             	J21             	J22             	1000        	162.00      	100         	0           	Open  	;
+ P21             	J22             	J23             	1000        	162.00      	100         	0           	Open  	;
+ P22             	J23             	J24             	1000        	162.00      	100         	0           	Open  	;
+ P23             	J24             	J25             	1000        	162.00      	100         	0           	Open  	;
+ P24             	J25             	J26             	1000        	162.00      	100         	0           	Open  	;
+ P25             	J21             	J14             	1000        	162.00      	100         	0           	Open  	;
+ P26             	J14             	J13             	1000        	162.00      	100         	0           	Open  	;
+ P27             	J13             	J6              	1000        	162.00      	100         	0           	Open  	;
+ P28             	J6              	J5              	1000        	162.00      	100         	0           	Open  	;
+ P29             	J20             	J15             	1000        	162.00      	100         	0           	Open  	;
+ P30             	J15             	J12             	1000        	162.00      	100         	0           	Open  	;
+ P31             	J12             	J7              	1000        	162.00      	100         	0           	Open  	;
+ P32             	J7              	J4              	1000        	162.00      	100         	0           	Open  	;
+ P33             	J19             	J16             	1000        	162.00      	100         	0           	Open  	;
+ P34             	J16             	J11             	1000        	162.00      	100         	0           	Open  	;
+ P35             	J11             	J8              	1000        	162.00      	100         	0           	Open  	;
+ P36             	J8              	J3              	1000        	162.00      	100         	0           	Open  	;
+ P37             	J2              	J9              	1000        	162.00      	100         	0           	Open  	;
+ P38             	J9              	J10             	1000        	162.00      	100         	0           	Open  	;
+ P39             	J10             	J17             	1000        	162.00      	100         	0           	Open  	;
+ P40             	J17             	J18             	1000        	162.00      	100         	0           	Open  	;
+ P41             	J1              	J2              	1000        	250         	100         	0           	Open  	;
+
+[PUMPS]
+;ID              	Node1           	Node2           	Parameters
+
+[VALVES]
+;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
+
+[TAGS]
+
+[DEMANDS]
+;Junction        	Demand      	Pattern         	Category
+
+[STATUS]
+;ID              	Status/Setting
+
+[PATTERNS]
+;ID              	Multipliers
+;Normal consumption
+ 1               	0.12124633  	0.17595308  	0.24046921  	0.63929619  	1.56304985  	2.39882698  
+ 1               	2.54252199  	2.14956012  	1.48973607  	0.92961877  	0.70674487  	0.58944282  
+ 1               	0.51319648  	0.49266862  	0.52199413  	0.63929619  	0.95307918  	1.60997067  
+ 1               	2.04398827  	1.65982405  	1.00293255  	0.5659824   	0.30205279  	0.12809751  
+ 1               	0.15054619  	0.20381232  	0.36070381  	1.04912023  	2.05498534  	2.56964809  
+ 1               	2.38123167  	1.85117302  	1.15322581  	0.79032258  	0.64956012  	0.53958944  
+ 1               	0.50073314  	0.49706745  	0.56891496  	0.75879765  	1.23313783  	1.93108504  
+ 1               	1.95234604  	1.29912023  	0.76173021  	0.41348974  	0.20358504  	0.12124633  
+ 1               	0.17595308  	0.24046921  	0.63929619  	1.56304985  	2.39882698  	2.54252199  
+ 1               	2.14956012  	1.48973607  	0.92961877  	0.70674487  	0.58944282  	0.51319648  
+ 1               	0.49266862  	0.52199413  	0.63929619  	0.95307918  	1.60997067  	2.04398827  
+ 1               	1.65982405  	1.00293255  	0.5659824   	0.30205279  	0.12809751  	0.15054619  
+ 1               	0.20381232  	0.36070381  	1.04912023  	2.05498534  	2.56964809  	2.38123167  
+ 1               	1.85117302  	1.15322581  	0.79032258  	0.64956012  	0.53958944  	0.50073314  
+ 1               	0.49706745  	0.56891496  	0.75879765  	1.23313783  	1.93108504  	1.95234604  
+ 1               	1.29912023  	0.76173021  	0.41348974  	0.20358504  	0.12124633  	0.17595308  
+ 1               	0.24046921  	0.63929619  	1.56304985  	2.39882698  	2.54252199  	2.14956012  
+ 1               	1.48973607  	0.92961877  	0.70674487  	0.58944282  	0.51319648  	0.49266862  
+ 1               	0.52199413  	0.63929619  	0.95307918  	1.60997067  	2.04398827  	1.65982405  
+ 1               	1.00293255  	0.5659824   	0.30205279  	0.12124633  
+;
+ 2               	0           	0           	0           	1           	1           	1           
+ 2               	1           	1           	1           	1           	1           	1           
+ 2               	1           	1           	1           	1           	1           	1           
+ 2               	1           	1           	1           	1           	1           	1           
+;
+ 3               	0           	0           	0           	0           	0           	0           
+ 3               	0           	0           	0           	0           	0           	0           
+ 3               	0           	0           	0           	0           	0           	0           
+ 3               	0           	0           	0           	0           	0           	0           
+;
+ 4               	1           	1           	1           	1           	1           	1           
+ 4               	1           	1           	1           	1           	1           	1           
+ 4               	1           	1           	1           	1           	1           	1           
+ 4               	1           	1           	1           	1           	1           	1           
+
+[CURVES]
+;ID              	X-Value     	Y-Value
+
+[CONTROLS]
+
+
+
+
+
+
+
+
+
+
+
+
+[RULES]
+
+
+
+
+
+
+
+
+
+
+
+
+[ENERGY]
+ Global Efficiency  	75
+ Global Price       	0
+ Demand Charge      	0
+
+[EMITTERS]
+;Junction        	Coefficient
+
+[QUALITY]
+;Node            	InitQual
+
+[SOURCES]
+;Node            	Type        	Quality     	Pattern
+ J9              	FLOWPACED   	100         	4
+
+[REACTIONS]
+;Type     	Pipe/Tank       	Coefficient
+
+
+[REACTIONS]
+ Order Bulk            	1
+ Order Tank            	1
+ Order Wall            	1
+ Global Bulk           	0
+ Global Wall           	0
+ Limiting Potential    	0
+ Roughness Correlation 	0
+
+[MIXING]
+;Tank            	Model
+
+[TIMES]
+ Duration           	48
+ Hydraulic Timestep 	0:30 
+ Quality Timestep   	0:05 
+ Pattern Timestep   	1:00 
+ Pattern Start      	0:00 
+ Report Timestep    	1:00 
+ Report Start       	0:00 
+ Start ClockTime    	12 am
+ Statistic          	NONE
+
+[REPORT]
+ Status             	No
+ Summary            	No
+ Page               	0
+
+[OPTIONS]
+ Units              	LPS
+ Headloss           	H-W
+ Specific Gravity   	1
+ Viscosity          	1
+ Trials             	40
+ Accuracy           	0.001
+ CHECKFREQ          	2
+ MAXCHECK           	10
+ DAMPLIMIT          	0
+ Unbalanced         	Continue 10
+ Pattern            	1
+ Demand Multiplier  	1.0
+ Demand Model       	PDA
+ Minimum Pressure   	0
+ Required Pressure  	20
+ Pressure Exponent  	0.5
+ Emitter Exponent   	0.5
+ Quality            	Chemical mg/L
+ Diffusivity        	1
+ Tolerance          	0.01
+
+[COORDINATES]
+;Node            	X-Coord           	Y-Coord
+J2              	1000.000          	4000.000          
+J3              	2000.000          	4000.000          
+J4              	3000.000          	4000.000          
+J5              	4000.000          	4000.000          
+J6              	4000.000          	3000.000          
+J7              	3000.000          	3000.000          
+J8              	2000.000          	3000.000          
+J9              	1000.000          	3000.000          
+J10             	1000.000          	2000.000          
+J11             	2000.000          	2000.000          
+J12             	3000.000          	2000.000          
+J13             	4000.000          	2000.000          
+J14             	4000.000          	1000.000          
+J15             	3000.000          	1000.000          
+J16             	2000.000          	1000.000          
+J17             	1000.000          	1000.000          
+J18             	1000.000          	0.000             
+J19             	2000.000          	0.000             
+J20             	3000.000          	0.000             
+J21             	4000.000          	0.000             
+J22             	5000.000          	0.000             
+J23             	5000.000          	1000.000          
+J24             	5000.000          	2000.000          
+J25             	5000.000          	3000.000          
+J26             	5000.000          	4000.000          
+J1              	0.000             	4000.000          
+
+[VERTICES]
+;Link            	X-Coord           	Y-Coord
+
+[LABELS]
+;X-Coord             Y-Coord             Label & Anchor Node
+
+[BACKDROP]
+  DIMENSIONS  	-250.000          	-200.000          	5250.000          	4200.000          
+ UNITS          	None
+ FILE           	
+ OFFSET         	0.00            	0.00            
+
+[END]
