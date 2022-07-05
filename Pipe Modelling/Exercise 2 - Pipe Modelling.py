@@ -2,6 +2,9 @@
 # EXERCISE 1 - PIPE MODELLING 
 # =============================================================================
 
+# IMPORT LIBRARY 
+import math 
+
 # INPUT THE DATA 
 D    = 0.02            # Diameter (m) 
 visc = 10**-6          # Kinematic viscosity (m2/s)
@@ -24,4 +27,25 @@ elif Re >= 4000 :
 elif Re > 2100 and Re < 4000 : 
     regime = "Transitional Flow"
 
-print(regime)
+# DETERMINE THE HEAD LOSSES FUNCTION
+def losses(Q,D, visc, ks,L) : 
+    
+    # Reynolds Number Calculation
+    A = 3.14 * (D/2)**2   # Cross-section area (m2)
+    V = Q / A             # Flow velocity (m/s)
+    Re = V * D / visc     # Reynolds number 
+    
+    # Darcy Friction Computation
+    if Re <= 2100 : 
+        f = 64 / Re 
+    else : 
+        f = 0.25 / ((math.log10((ks/D)/3.7) + (5.74 / (Re**0.9)))**2)
+    
+    # Head Losses Computation
+    losses = (f * V**2 ) / (2 * 9.81 * D) * L 
+    
+    return losses 
+
+print(losses(Q, D, visc, ks, L))
+    
+    
