@@ -17,12 +17,16 @@ wntr.graphics.plot_network(wn, title=wn.name)
 
 # (2) Launch network and plot results
 # Launch simulation:
-sim = wntr.sim.EpanetSimulator(wn)
+wn.options.hydraulic.demand_model = 'PDD'                                       # Change to Presure Demand Driven
+#sim = wntr.sim.EpanetSimulator(wn)
+sim = wntr.sim.WNTRSimulator(wn)
 results = sim.run_sim() # simulation results are stored in a variable named "results"
 
 # Print pressure results
 pressures = results.node['pressure'].loc[0,:] 
 print(pressures)
+demands = results.node['demand'].loc[0,:]
+print(demands)
 velocities = results.link['velocity'].loc[0,:] 
 print(velocities)
 

@@ -15,12 +15,11 @@
 # Import Python packages:
 import wntr
 import pygad
-#import numpy
 
 
 # (1) Import and plot an EPANET model
 # Import model:
-inp_file = 'G:/My Drive/Work Data/PT. Hutomo Bangun Perkasa/Hydroinformatics/Pipe Modelling/Exercise 4/network_steady.inp'
+inp_file = 'D:/04_IHE/01_Education/01_Courses/2022_M11_AWTD/03_Python/03_Workshops/01_workshop_WDM/network_steady.inp'
 wn = wntr.network.WaterNetworkModel(inp_file)  # The network is loaded in Python under the name "wn"
 # Plot network:
 wntr.graphics.plot_network(wn, title=wn.name)
@@ -43,15 +42,13 @@ wntr.graphics.plot_network(wn, node_attribute=pressure_at_0hr, node_size=150, ti
 
 
 # (3) Optimization inputs:
-function_inputs = [1,1] # input parameter (node demand m3/s) --> this could be an array of values
-desired_output = 20 # desired output (min pressure in the system)
+function_inputs = 1 # input parameter, this could be an array for a multivariate optimization
+desired_output = 10 # desired output (min pressure in the system)
 
 # (4) Objective function definition:
 def fitness_func(solution, solution_idx): # Calculating the fitness value of each solution in the current population. 
-    pipe_P1 = wn.get_link('P1') # Selection of pipe
-    pipe_P1.diameter = function_inputs[0]*solution[0]  # Assign new diameter to pipe
     pipe_P7 = wn.get_link('P7') # Selection of pipe
-    pipe_P7.diameter = function_inputs[1]*solution[1]  # Assign new diameter to pipe
+    pipe_P7.diameter = function_inputs*solution[0]  # Assign new diameter to pipe
     results = sim.run_sim() # Epanet is launched with the new input
     pressures = results.node['pressure'].loc[0,:]  # Pressure results are stored
     output = min(pressures[0:7]) # Minimum pressure in the system is selected and stored
@@ -60,13 +57,13 @@ def fitness_func(solution, solution_idx): # Calculating the fitness value of eac
 fitness_function = fitness_func
 
 # (5) Optimization setup is defined
-num_generations = 10 # Number of generations.
+num_generations = 100 # Number of generations.
 num_parents_mating = 2 # Number of solutions to be selected as parents in the mating pool.
-sol_per_pop = 20 # Number of solutions in the population.
-num_genes = 2 #len(function_inputs) --> this can be an array
-init_range_low = 0.1 
+sol_per_pop = 10 # Number of solutions in the population.
+num_genes = 1 # as many as variables being optimized 
+init_range_low = 0.1
 init_range_high = 1
-gene_space = [{'low': 0.01 ,'high': 1},{'low': 0.01 ,'high': 1}] # Solution space to be searched
+gene_space = [{'low': 0.1 ,'high': 1}] # Solution space to be searched
 last_fitness = 0
 
 # (6) GA instance is created and run:
@@ -102,14 +99,11 @@ print("Fitness value of the best solution = {solution_fitness}".format(solution_
 print("Index of the best solution : {solution_idx}".format(solution_idx=solution_idx))
 
 # (8) The solution is confirmed launching Epanet and new results are printed:
-pipe_P1 = wn.get_link('P1') 
-pipe_P1.diameter = function_inputs[0]*solution[0]
 pipe_P7 = wn.get_link('P7') 
-pipe_P7.diameter = function_inputs[1]*solution[1]
+pipe_P7.diameter = function_inputs*solution[0]
 results = sim.run_sim()
 pressures = results.node['pressure'].loc[0,:] 
 print(pressures)
-print('solution diameter P1', round(1000*pipe_P1.diameter,3),'mm')
-print('solution diameter P7', round(1000*pipe_P7.diameter,3),'mm')
+print('optimal diameter', round(1000*pipe_P7.diameter,3),'mm')
 
 
