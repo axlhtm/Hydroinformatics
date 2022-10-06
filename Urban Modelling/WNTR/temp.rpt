@@ -1,0 +1,123 @@
+  Page 1                                    Tue Oct 04 15:11:10 2022
+
+  ******************************************************************
+  *                           E P A N E T                          *
+  *                   Hydraulic and Water Quality                  *
+  *                   Analysis for Pipe Networks                   *
+  *                         Version 2.2                            *
+  ******************************************************************
+  
+  Analysis begun Tue Oct 04 15:11:10 2022
+
+   
+  Hydraulic Status:
+  -----------------------------------------------------------------------
+     0:00:00: Balanced after 4 trials
+     0:00:00: Reservoir 9 is emptying
+     0:00:00: Tank 2 is emptying at 120.00 ft
+   
+     1:00:00: Balanced after 1 trials
+   
+     2:00:00: Balanced after 2 trials
+   
+     3:00:00: Balanced after 1 trials
+   
+     4:00:00: Balanced after 2 trials
+   
+     4:07:45: Balanced after 5 trials
+     4:07:45: Tank 2 is closed at 100.00 ft
+     4:07:45: Pipe 110 changed from open to temporarily closed
+   
+  WARNING: Negative pressures at 4:07:45 hrs.
+   
+     5:00:00: Balanced after 1 trials
+   
+  WARNING: Negative pressures at 5:00:00 hrs.
+   
+     6:00:00: Balanced after 2 trials
+   
+  WARNING: Negative pressures at 6:00:00 hrs.
+   
+     7:00:00: Balanced after 1 trials
+   
+  WARNING: Negative pressures at 7:00:00 hrs.
+   
+     8:00:00: Balanced after 2 trials
+   
+  WARNING: Negative pressures at 8:00:00 hrs.
+   
+     9:00:00: Balanced after 1 trials
+   
+  WARNING: Negative pressures at 9:00:00 hrs.
+   
+    10:00:00: Balanced after 2 trials
+   
+  WARNING: Negative pressures at 10:00:00 hrs.
+   
+    11:00:00: Balanced after 1 trials
+   
+  WARNING: Negative pressures at 11:00:00 hrs.
+   
+    12:00:00: Balanced after 2 trials
+   
+  WARNING: Negative pressures at 12:00:00 hrs.
+   
+    13:00:00: Balanced after 1 trials
+   
+  WARNING: Negative pressures at 13:00:00 hrs.
+   
+    14:00:00: Balanced after 2 trials
+   
+  WARNING: Negative pressures at 14:00:00 hrs.
+   
+    15:00:00: Balanced after 1 trials
+   
+  WARNING: Negative pressures at 15:00:00 hrs.
+   
+    16:00:00: Balanced after 2 trials
+   
+  WARNING: Negative pressures at 16:00:00 hrs.
+   
+    17:00:00: Balanced after 1 trials
+   
+  WARNING: Negative pressures at 17:00:00 hrs.
+   
+    18:00:00: Balanced after 2 trials
+   
+  WARNING: Negative pressures at 18:00:00 hrs.
+   
+    19:00:00: Balanced after 1 trials
+   
+  WARNING: Negative pressures at 19:00:00 hrs.
+   
+    20:00:00: Balanced after 2 trials
+   
+  WARNING: Negative pressures at 20:00:00 hrs.
+   
+    21:00:00: Balanced after 1 trials
+   
+  WARNING: Negative pressures at 21:00:00 hrs.
+   
+    22:00:00: Balanced after 2 trials
+   
+  WARNING: Negative pressures at 22:00:00 hrs.
+   
+    23:00:00: Balanced after 1 trials
+   
+  WARNING: Negative pressures at 23:00:00 hrs.
+   
+    24:00:00: Balanced after 2 trials
+   
+  WARNING: Negative pressures at 24:00:00 hrs.
+   
+  Water Quality Mass Balance (mg)
+  ================================
+  Initial Mass:      7.21448e+006
+  Mass Inflow:       4.84216e+006
+  Mass Outflow:      3.81737e+006
+  Mass Reacted:      4.32104e+006
+  Final Mass:        3.93482e+006
+  Mass Ratio:         1.00138
+  ================================
+
+  Analysis ended Tue Oct 04 15:11:10 2022

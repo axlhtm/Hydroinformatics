@@ -1,6 +1,6 @@
 ; Filename: G:/My Drive/Work Data/PT. Hutomo Bangun Perkasa/Hydroinformatics/Urban Modelling/WNTR/Net1.inp
 ; WNTR: 0.4.2
-; Created: 2022-10-04 14:14:27
+; Created: 2022-10-04 15:11:10
 [TITLE]
 EPANET Example Network 1
 A simple example of modeling chlorine decay. Both bulk and
@@ -28,7 +28,7 @@ wall reactions are included.
 
 [PIPES]
 ;ID                   Node1                Node2                              Length             Diameter            Roughness           Minor Loss               Status
- 10                   10                   11                             10530              18             100               0                 Open   ;
+ 10                   10                   11                             10530    1.6141732283             100               0                 Open   ;
  11                   11                   12                              5280              14             100               0                 Open   ;
  12                   12                   13                              5280              10             100               0                 Open   ;
  21                   21                   22                              5280              10             100               0                 Open   ;
