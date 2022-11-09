@@ -1,23 +1,21 @@
-# =============================================================================
-# EXAMPLE - HOW TO CONVERT AUDIO FILES SIGNAL TO NUMERICAL DATA
-# =============================================================================
+#  ============================================================================
+#  THESIS RESEARCH - EXTRACTING FEATURES FROM ACOUSTIC DATA FILES 
+#  ============================================================================
 
 #  IMPORT PYTHON LIBRARIES
-import numpy as np 
-import librosa as librosa
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-import librosa.display
-import pandas as pd 
 import os 
-from sklearn.model_selection import train_test_split
-import splitfolders 
-import skimage.io
+import librosa
+import numpy as np
+import pandas as pd  
+import librosa.display
 import scipy.stats as stats
+
+from glob import glob 
 from scipy.fft import fft
 
 #  LOAD AUDIO FILES SIGNAL 
-y, sr  = librosa.load("G:/My Drive/College Data/S2 - M.Sc. - Hydroinformatics - UN-IHE Delft/Thesis Research/Data/Noise Signal/59250_nov_rth.wav", sr=32000)
+cwd    = "G:/My Drive/College Data/S2 - M.Sc. - Hydroinformatics - UN-IHE Delft/Thesis Research/Data CUP Braila/Acoustic Data"
+y, sr  = librosa.load(cwd+"/More Data/59250_30sept.wav", sr=32000)
 df     = (pd.DataFrame(data=[y])).T # Convert audio signal to dataframe 
 
 #  DISPLAY AUDIO FILES SIGNAL 
@@ -75,20 +73,16 @@ Sum_f.append(np.sum(S))
 Mean_f.append(np.mean(S))
 Var_f.append(np.var(S))
 Peak_f.append(np.max(np.abs(S)))
-Skew_f.append(stats.skew(df.values))
-Kurt_f.append(stats.kurtosis(df.values))
+Skew_f.append(stats.skew(S))
+Kurt_f.append(stats.kurtosis(S))
 
 #  FEATURES ALLOCATION IN DATAFRAME
-## Time Domain Features
-TD_Features = pd.DataFrame(index = [TD_Idx], 
-                           data  = [Min, Max, Mean, Rms, Var, Std, Power,
-                                    Peak, P2P, CF, Skew, Kurt, FF, PI])
-## Frequency Domain Features
-FD_Features = pd.DataFrame(index = [FD_Idx], 
-                           data  = [Max_f, Sum_f, Mean_f, Var_f, Peak_f,
-                                    Skew_f, Kurt_f])
+data = {'Mean - TD'     : Mean,
+        'Peak - TD'     : Peak,
+        'Peak - FD'     : Peak_f, 
+        'Kurtosis - FD' : Kurt_f,
+        'Leak'          : 3}
+Dataset = pd.DataFrame(data)
 
-## Dataset
-Features = ['Mean','Peak', 'Peak Frequency','Kurtosis Frequency']
-Dataset  = pd.DataFrame(index = [Features], 
-                        data  = [Mean, Peak, Peak_f, Kurt_f])
+#  EXPORT DATASET TO CSV 
+Dataset.to_csv (r'G:/My Drive/College Data/S2 - M.Sc. - Hydroinformatics - UN-IHE Delft/Thesis Research/Data CUP Braila/Acoustic Data/New Dataset Output.csv', index = None, header=True) 
